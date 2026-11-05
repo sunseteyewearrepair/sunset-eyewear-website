@@ -17,13 +17,7 @@ A plain HTML/CSS site with no build step. Every file in this folder gets publish
 
 ## Things to fill in
 
-Every placeholder shows up on the page as a **yellow highlighted box**. To find them all, search the HTML files for `class="todo"`:
-
-- `services.html`: a starting price for each service, and your turnaround time
-- `mail-in.html`: your shipping address
-- `business.html`: your business pricing, and how quickly you reply to requests
-
-The service list is based on common eyewear repairs. Remove any service you don't offer and add any that are missing.
+The only placeholder left is your **shipping address** on `mail-in.html`. It shows as a yellow highlighted box; search for `class="todo"` to find it.
 
 ## How the business form works
 
@@ -65,7 +59,6 @@ From now on, any change you commit to GitHub goes live automatically within a mi
 1. In Cloudflare, open your domain and go to **Email → Email Routing**. Enable it, and let Cloudflare add the MX and TXT records it asks for.
 2. Under **Destination addresses**, add the inbox you want mail delivered to, then click the verification link Cloudflare emails you.
 3. Under **Routing rules**, create two custom addresses:
-   - `matt@sunseteyewearrepair.com` → your inbox
    - `info@sunseteyewearrepair.com` → your inbox
 4. Test it by sending an email to each address from a different account.
 

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="A pair of glasses against a striped sunset">
+  <defs><clipPath id="disc"><circle cx="200" cy="200" r="168"/></clipPath></defs>
+  <circle cx="212" cy="212" r="172" fill="#0e0b0a"/>
+  <circle cx="200" cy="200" r="172" fill="#0e0b0a"/>
+  <g clip-path="url(#disc)">
+    <rect width="400" height="400" fill="#d92b23"/>
+    <rect x="0" y="232" width="400" height="7" fill="#0e0b0a"/>
+    <rect x="0" y="258" width="400" height="11" fill="#0e0b0a"/>
+    <rect x="0" y="288" width="400" height="16" fill="#0e0b0a"/>
+    <rect x="0" y="324" width="400" height="22" fill="#0e0b0a"/>
+    <rect x="0" y="364" width="400" height="40" fill="#0e0b0a"/>
+  </g>
+  <g fill="#0e0b0a">
+    <path d="M58 150h108c7 0 12 6 11 13l-7 36c-3 14-15 24-29 24h-38c-15 0-27-11-29-26l-6-37c-1-6-5-9-10-10z"/>
+    <path d="M342 150H234c-7 0-12 6-11 13l7 36c3 14 15 24 29 24h38c15 0 27-11 29-26l6-37c1-6 5-9 10-10z"/>
+    <rect x="165" y="150" width="70" height="16" rx="6"/>
+    <rect x="30" y="148" width="40" height="15" rx="7"/>
+    <rect x="330" y="148" width="40" height="15" rx="7"/>
+  </g>
+  <g fill="none" stroke="#ff7a1a" stroke-width="5" stroke-linecap="round">
+    <path d="M95 172l22-10"/><path d="M263 172l22-10"/>
+  </g>
+</svg>
