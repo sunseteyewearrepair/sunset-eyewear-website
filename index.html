@@ -1,141 +1,219 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sunset Eyewear Repair | Frames That Feel New Again</title>
-  <meta name="description" content="Sunset Eyewear Repair does careful, diligent eyewear repairs by mail: hinges, soldering, temples, nose pads and more, so your frames feel like new again.">
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunset Eyewear Repair — Opening 2027</title>
+<meta name="description" content="Sunset Eyewear Repair: precision eyeglass frame repair in San Francisco. Opening 2027. Free pickup and delivery within San Francisco.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #F58A1F;
+    --orange-deep: #E8701A;
+    --red: #C62828;
+    --cream: #FFF6EA;
+    --gold: #FFE2B8;
+    --ink: #1A1A1A;
+    --rule: #F2C9A0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Poppins", system-ui, sans-serif;
+    background: var(--orange);
+    color: var(--ink);
+    line-height: 1.6;
+    padding: 18px;
+    min-height: 100vh;
+  }
+
+  /* Red rounded double trim around the whole page */
+  .frame {
+    border: 5px solid var(--red);
+    border-radius: 26px;
+    padding: 7px;
+    min-height: calc(100vh - 36px);
+  }
+  .frame-inner {
+    border: 1.5px solid var(--red);
+    border-radius: 18px;
+    min-height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap { width: 100%; max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header.wrap { text-align: center; padding: 56px 24px 36px; color: #fff; }
+  .sun { display: block; margin: 0 auto 18px; }
+  h1 {
+    font-weight: 700;
+    font-size: clamp(2rem, 5.5vw, 3.2rem);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+  }
+  .tagline { font-weight: 300; font-size: 1.1rem; line-height: 1.2; margin-top: 30px; }
+
+  /* Opening banner */
+  .banner {
+    background: var(--red);
+    color: #fff;
+    border-radius: 16px;
+    text-align: center;
+    padding: 22px 20px;
+    margin-bottom: 36px;
+  }
+  .banner strong { display: block; font-size: 1.35rem; font-weight: 700; letter-spacing: 0.04em; }
+  .banner span { font-size: 0.95rem; opacity: 0.95; }
+
+  /* Section headings */
+  h2 {
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  /* Service cards */
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 18px; }
+  .card { background: var(--cream); border-radius: 14px; padding: 20px 22px; }
+  .card h3 {
+    color: var(--red);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .card ul { list-style: none; }
+  .card li { font-size: 0.95rem; padding: 3px 0; }
+
+  .services { margin-bottom: 18px; padding: 24px 28px; }
+  .services ul { columns: 2; column-gap: 40px; }
+  .services li { break-inside: avoid; padding: 6px 0; border-bottom: 1px solid var(--rule); }
+  .note { text-align: center; color: #fff; font-size: 0.95rem; margin-bottom: 36px; }
+
+  /* Delivery strip */
+  .strip {
+    background: var(--gold);
+    border: 2px solid var(--red);
+    border-radius: 14px;
+    text-align: center;
+    color: var(--red);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+    padding: 14px 16px;
+    margin-bottom: 44px;
+  }
+
+  /* Business accounts */
+  .accounts {
+    background: var(--cream);
+    border-radius: 16px;
+    text-align: center;
+    padding: 30px 24px;
+    margin-bottom: 52px;
+  }
+  .accounts h2 { color: var(--red); margin-bottom: 10px; }
+  .accounts p { max-width: 520px; margin: 0 auto 6px; font-size: 0.97rem; }
+  .accounts .small { color: #6b4a33; font-size: 0.88rem; margin-bottom: 20px; }
+  .btn {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 12px 28px;
+    border-radius: 999px;
+    transition: background 0.15s ease;
+  }
+  .btn:hover, .btn:focus { background: var(--ink); }
+
+  /* Footer */
+  footer {
+    margin-top: auto;
+    background: var(--orange-deep);
+    border-radius: 0 0 17px 17px;
+    text-align: center;
+    color: #fff;
+    padding: 26px 20px;
+  }
+  footer a { color: var(--gold); font-weight: 700; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .fine { font-size: 0.82rem; margin-top: 6px; opacity: 0.9; }
+
+  @media (max-width: 640px) {
+    body { padding: 10px; }
+    .frame { border-width: 4px; border-radius: 20px; padding: 5px; }
+    .frame-inner { border-radius: 14px; }
+    .services ul { columns: 1; }
+    header.wrap { padding: 40px 16px 36px; }
+  }
+</style>
 </head>
 <body>
+<div class="frame">
+  <div class="frame-inner">
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.svg" alt="">
-        <span class="brand-name">Sunset<span>Eyewear Repair</span></span>
-      </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="nav" id="site-nav" aria-label="Main">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="services.html">Services</a>
-        <a href="mail-in.html">Mail-In Repairs</a>
-        <a href="business.html">Business Accounts</a>
-        <a class="btn btn-sunset" href="mail-in.html">Start a Repair</a>
-      </nav>
-    </div>
-  </header>
+    <header class="wrap">
+      <svg class="sun" width="96" height="40" viewBox="0 0 96 40" aria-hidden="true">
+        <path d="M24 34 A24 24 0 0 1 72 34 Z" fill="#FFE2B8"/>
+        <rect x="6" y="33" width="84" height="3" rx="1.5" fill="#FFE2B8"/>
+      </svg>
+      <h1>SUNSET EYEWEAR REPAIR</h1>
+      <p class="tagline">San Francisco</p>
+    </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div>
-          <span class="eyebrow">Diligent eyewear repair, by mail</span>
-          <h1>Frames that feel <em>new</em> again.</h1>
-          <p class="lede">Broken hinge, snapped bridge, bent temples: send them to us. We repair your favorite frames with care so they look, fit and feel like the day you got them.</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="mail-in.html">Mail in your glasses</a>
-            <a class="btn btn-ghost" href="services.html">See what we fix</a>
-          </div>
-        </div>
-        <img class="hero-art" src="assets/hero-sun.svg" alt="" width="400" height="400">
+    <main class="wrap">
+      <div class="banner">
+        <strong>OPENING 2027</strong>
+        <span>Business partnerships now forming</span>
       </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">What we fix</span>
-          <h2>Repair over replace.</h2>
-          <p>Good frames are worth saving. Whether it's a pair you love or a pair you can't easily replace, we take the time to do the repair right.</p>
+      <section aria-labelledby="services">
+        <h2 id="services">Services</h2>
+        <div class="card services">
+          <ul>
+            <li>Weld</li>
+            <li>Acetate mend</li>
+            <li>Hinge repair</li>
+            <li>Rivet repair</li>
+            <li>Screw extraction &amp; screw lock</li>
+            <li>Polish</li>
+            <li>Matte finish</li>
+            <li>AR coating removal</li>
+            <li>Welded &amp; heat-sunk nose pad addition</li>
+            <li>General repairs</li>
+          </ul>
         </div>
-        <div class="grid grid-3">
-          <div class="card card-accent">
-            <h3>Hinges &amp; Temples</h3>
-            <p>Loose or broken hinges and arms, repaired so your frames open, close and fit properly again.</p>
-          </div>
-          <div class="card card-accent">
-            <h3>Frame Soldering</h3>
-            <p>Snapped bridges and broken joints on metal frames, rejoined with a strong, clean repair.</p>
-          </div>
-          <div class="card card-accent">
-            <h3>Tune-Ups &amp; Parts</h3>
-            <p>Straightening, alignment, nose pads and screws: the small fixes that make a big difference.</p>
-          </div>
-        </div>
-        <div class="btn-row"><a class="btn btn-ghost" href="services.html">All services</a></div>
-      </div>
-    </section>
+        <p class="note">Quotes for mail-in orders provided upon evaluation.</p>
+      </section>
 
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">How it works</span>
-          <h2>Three steps. No storefront needed.</h2>
-          <p>We work entirely by mail, so you can send your frames from anywhere.</p>
-        </div>
-        <div class="steps grid-3">
-          <div class="step">
-            <h3>Pack &amp; ship</h3>
-            <p>Fill out a repair slip, pack your glasses in a hard case, and mail them to us.</p>
-          </div>
-          <div class="step">
-            <h3>We repair</h3>
-            <p>We inspect your frames, confirm the work with you by email, and get to it.</p>
-          </div>
-          <div class="step">
-            <h3>Back to you</h3>
-            <p>Your frames ship back to you, fixed and ready to wear.</p>
-          </div>
-        </div>
-        <div class="btn-row">
-          <a class="btn btn-sunset" href="mail-in.html">Full mail-in instructions</a>
-        </div>
-      </div>
-    </section>
+      <div class="strip">FREE PICKUP &amp; DELIVERY WITHIN SAN FRANCISCO</div>
 
-    <section class="band">
-      <div class="container band-inner">
-        <div>
-          <h2>Optical shop? <span>Let's work together.</span></h2>
-          <p>Set up a business account to send your customers' repairs to us on a regular basis.</p>
-        </div>
-        <a class="btn btn-sunset" href="business.html">Set up a business account</a>
-      </div>
-    </section>
-  </main>
+      <section class="accounts" aria-labelledby="business">
+        <h2 id="business">Business Accounts</h2>
+        <p>Repair partnership for optical shops, optometrists and eyewear boutiques.</p>
+        <p class="small">Limited to 15 accounts &bull; Early partner pricing available</p>
+        <a class="btn" href="mailto:info@sunseteyewearrepair.com?subject=Business%20Account%20Inquiry">Request an Account</a>
+      </section>
+    </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <a class="brand" href="index.html">
-          <img src="assets/logo.svg" alt="">
-          <span class="brand-name">Sunset<span>Eyewear Repair</span></span>
-        </a>
-        <p style="margin-top:16px;max-width:36ch;">Diligent eyewear repairs that make your frames feel like new again.</p>
-      </div>
-      <div>
-        <h4>Pages</h4>
-        <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="mail-in.html">Mail-In Repairs</a></li>
-          <li><a href="business.html">Business Accounts</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:info@sunseteyewearrepair.com">info@sunseteyewearrepair.com</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-bottom">&copy; <span id="year">2026</span> Sunset Eyewear Repair</div>
-  </footer>
+    <footer>
+      <a href="mailto:info@sunseteyewearrepair.com">info@sunseteyewearrepair.com</a>
+      <p class="fine">Sunset Eyewear Repair &bull; San Francisco &bull; Opening 2027</p>
+    </footer>
 
-  <script src="main.js"></script>
+  </div>
+</div>
 </body>
 </html>
